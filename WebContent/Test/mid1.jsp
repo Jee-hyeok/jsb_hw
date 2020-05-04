@@ -7,8 +7,9 @@
 <title>Insert title here</title>
 <style>
 table {border-collapse: collapse;}
-td {border: 1px solid black;}
-
+td {border: 1px solid black; width: 140px; padding: 5px;}
+div { margin-bottom :10px;}
+button { width : 50px;}
 </style>
 </head>
 <body>
@@ -17,11 +18,11 @@ td {border: 1px solid black;}
 String s1 = request.getParameter("number");
 int number = (s1 == null) ? 0 : Integer.parseInt(s1);
 %>
-
+<div>
 <input type="text" name="number" value= <%= number %>>
 
 <button type="submit">단</button>
-
+</div>
 </form>
 <table>
 
