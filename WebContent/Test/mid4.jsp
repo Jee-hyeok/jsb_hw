@@ -38,10 +38,10 @@ if(name == ""){
 </div>
 <label>성별</label>
 <div>
-<label><input type ="radio" name="sex" value="male">남자</label>
+<label><input type ="radio" name="sex" value="남자">남자</label>
 </div>
 <div>
-<label><input type ="radio" name="sex" value="female">여자</label>
+<label><input type ="radio" name="sex" value="여자">여자</label>
 </div>
 <button type="submit">회원 등록</button>
 </form>
