@@ -1,10 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-<%
-String name = "";
 
-%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,6 +17,19 @@ div.error {margin: 10px; padding: 10px 20px; background-color: #fdd; border: 1px
 </style>
 </head>
 <body>
+<%
+String name = request.getParameter("name");
+if(name == null) name = "";
+String 에러메시지 = null;
+String sex = request.getParameter("sex");
+
+if(name == ""){
+	에러메시지 = "회원등록 실패:이름을 입력하세요.";
+} else if (sex == null){
+	에러메시지 ="회원등록 실패: 성별을 입력하세요.";
+}
+
+%>
 <form>
 <h1>회원등록</h1>
 <label>이름</label>
@@ -44,11 +54,11 @@ div.error {margin: 10px; padding: 10px 20px; background-color: #fdd; border: 1px
 <table>
 <tr>
 <td>이름</td>
-<td></td>
+<td><%= name %></td>
 </tr>
 <tr>
 <td>성별</td>
-<td></td>
+<td><%= sex %></td>
 </tr>
 </table>
 
