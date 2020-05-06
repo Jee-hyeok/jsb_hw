@@ -39,7 +39,7 @@ public class BookDAO {
 
 	public static List<Book> findByAuthor(String author) throws Exception {
 		String sql = "SELECT b.*, c.categoryName " +
-                "FROM book b LEFT JOIN category c ON b.categoryId = c.id" +
+                "FROM book b LEFT JOIN category c ON b.categoryId = c.id " +
                 "WHERE b.author LIKE ?";
 		try (Connection connection = DB.getConnection("book");
 			PreparedStatement statement = connection.prepareStatement(sql)){

@@ -15,6 +15,7 @@ List<Book> list = BookDAO.findByAuthor(srchText);
     table{ border-collapse: collapse; width: 100%; }
     td, th { padding: 4px; border: 1px solid lightgray; }
     td:nth-child(4) { text-align: center; }
+    div {margin-bottom : 10px;}
   </style>
 </head>
 <body>
@@ -22,9 +23,11 @@ List<Book> list = BookDAO.findByAuthor(srchText);
 
   <h1>학생목록</h1>
   <form>
-  <label>이름</label>
+  <div>
+  <label>저자</label>
   <input type="text" name="srchText" value="<%= srchText %>" placeholder="검색조건" />
   <button type="submit">조회</button>
+  </div>
   </form>
   
   <table>
