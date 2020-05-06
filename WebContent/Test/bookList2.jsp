@@ -16,6 +16,8 @@ List<Book> list = BookDAO.findByAuthor(srchText);
     td, th { padding: 4px; border: 1px solid lightgray; }
     td:nth-child(4) { text-align: center; }
     div {margin-bottom : 10px;}
+    input { padding : 5px; }
+    button { width: 70px; padding : 5px; }
   </style>
 </head>
 <body>
