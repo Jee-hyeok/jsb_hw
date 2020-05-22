@@ -16,20 +16,19 @@
 		year = Integer.parseInt(request.getParameter("year"));
 		String s = request.getParameter("departmentId");
 		departmentId = Integer.parseInt(s);
-
 		if (id == 0) {
-	에러메시지 = "학생등록 실패: ID를 입력하세요.";
+			에러메시지 = "학생등록 실패: ID를 입력하세요.";
 		} else if (name == null || name.length() == 0) {
-	에러메시지 = "학생등록 실패: 이름을 입력하세요.";
+			에러메시지 = "학생등록 실패: 이름을 입력하세요.";
 		} else if (studentNumber == null || studentNumber.length() == 0) {
-	에러메시지 = "학생등록 실패: 학번을 입력하세요.";
+			에러메시지 = "학생등록 실패: 학번을 입력하세요.";
 		} else if (year == 0) {
-	에러메시지 = "학생등록 실패: 학년을 입력하세요.";
+			에러메시지 = "학생등록 실패: 학년을 입력하세요.";
 		} else {
-	Professor student = new Professor(id, studentNumber, name, departmentId, year);
-	session.setAttribute("student", student);
-	response.sendRedirect("studentCreate_success.jsp");
-	return;
+			Student student = new Student(id, studentNumber, name, departmentId, year);
+			session.setAttribute("student", student);
+			response.sendRedirect("studentCreate_success.jsp");
+			return;
 		}
 	}
 %>
@@ -45,30 +44,24 @@ body {
 	font-family: 굴림체;
 	font-size: 10pt;
 }
-
 div.container {
 	width: 400px;
 	margin: 20px auto;
 }
-
 form, form div {
 	margin-bottom: 20px;
 }
-
 label {
 	display: block;
 }
-
 input.text {
 	width: 200px;
 	padding: 5px;
 }
-
 select {
 	width: 150px;
 	padding: 5px;
 }
-
 .btn {
 	padding: 0.7em 2em;
 	border: 1px solid #aaa;
@@ -82,25 +75,21 @@ select {
 	cursor: pointer;
 	display: inline-block;
 }
-
 .btn:active {
 	-ms-transform: translateY(2px);
 	-webkit-transform: translateY(2px);
 	transform: translateY(2px);
 	background: #ccc;
 }
-
 hr {
 	margin-top: 80px;
 }
-
 div.info {
 	margin: 10px;
 	padding: 10px 20px;
 	background-color: #dff;
 	border: 1px solid #8ff;
 }
-
 div.error {
 	margin: 10px;
 	padding: 10px 20px;
@@ -148,7 +137,7 @@ div.error {
 			회원가입 실패:<%=에러메시지%>
 			</div>
 			<% } %>
-		
+
 
 
 
@@ -173,4 +162,4 @@ div.error {
 
 
 </body>
-</html>
+</html> 

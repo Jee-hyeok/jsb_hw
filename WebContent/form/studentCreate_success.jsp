@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="lecture1.form02.*"%>
 <%
-	Professor student = (Professor) session.getAttribute("student");
+	Student student = (Student) session.getAttribute("student");
 %>
 <!DOCTYPE html>
 <html>
@@ -13,21 +13,17 @@
 body {
 	font-family: 굴림체;
 }
-
 div.container {
 	width: 600px;
 	margin: 20px auto;
 }
-
 table {
 	width: 500px;
 	border-collapse: collapse;
 }
-
 thead tr {
 	background-color: #eee;
 }
-
 td, th {
 	border: 1px solid #aaa;
 	padding: 5px;
@@ -58,12 +54,12 @@ td, th {
 				<td>학년</td>
 				<td><%= student.getYear() %></td>
 			</tr>
-		
-		
+
+
 		</table>
 
 
 	</div>
 
 </body>
-</html>
+</html> 
