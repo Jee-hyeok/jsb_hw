@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="lecture1.form02.*"%>
 <%
-	Student student = (Student) session.getAttribute("student");
+	Professor student = (Professor) session.getAttribute("student");
 %>
 <!DOCTYPE html>
 <html>

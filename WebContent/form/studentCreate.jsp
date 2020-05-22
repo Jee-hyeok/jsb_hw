@@ -18,18 +18,18 @@
 		departmentId = Integer.parseInt(s);
 
 		if (id == 0) {
-			에러메시지 = "학생등록 실패: ID를 입력하세요.";
+	에러메시지 = "학생등록 실패: ID를 입력하세요.";
 		} else if (name == null || name.length() == 0) {
-			에러메시지 = "학생등록 실패: 이름을 입력하세요.";
+	에러메시지 = "학생등록 실패: 이름을 입력하세요.";
 		} else if (studentNumber == null || studentNumber.length() == 0) {
-			에러메시지 = "학생등록 실패: 학번을 입력하세요.";
+	에러메시지 = "학생등록 실패: 학번을 입력하세요.";
 		} else if (year == 0) {
-			에러메시지 = "학생등록 실패: 학년을 입력하세요.";
+	에러메시지 = "학생등록 실패: 학년을 입력하세요.";
 		} else {
-			Student student = new Student(id, studentNumber, name, departmentId, year);
-			session.setAttribute("student", student);
-			response.sendRedirect("studentCreate_success.jsp");
-			return;
+	Professor student = new Professor(id, studentNumber, name, departmentId, year);
+	session.setAttribute("student", student);
+	response.sendRedirect("studentCreate_success.jsp");
+	return;
 		}
 	}
 %>
